@@ -1,2 +1,2 @@
 # OC-P3
-Dépôt du Projet P3 OpenClassRooms
+Dépôt de test des fonctionnalités Git et GitHub
