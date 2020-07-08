@@ -10,3 +10,8 @@ echo "* [2]: INSTALLATION DE VIM *"
 echo "****************************"
 apt-get install -y vim
 
+echo "********************************"
+echo "* [3]: INSTALLATION DE ANSIBLE *"
+echo "********************************"
+apt-get install -y ansible
+
