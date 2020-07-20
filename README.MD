@@ -1,35 +1,34 @@
-# Vagrant
+# Bienvenue sur mon projet Vagrant !
+Il s'agit d'un projet réalisé en Juillet 2020 dans le cadre de ma formation "Expert DevOps" chez OpenClassRooms.
 
-Ce dépot permet la construction par Vagrant d'une VM Virtual Box, basée Ubuntu 18-04, avec des outils installés dessus ( dans leur versions les plus récentes ) :
-VIM
-Docker
-Ansible
+## Ca fait quoi ?
+Ca crée une VM Virtual Box sur une base ubuntu, avec 2 ports mappés, et avec des outils installés : éditeur VIM, Docker Engine, et Ansible.
 
-De plus, une redirection de port est configuré par Vagrant :
-le port 32768 de la VM sur le port 32768 de l'hôte
-le port 8080 de la VM sur le port 8080 de l'hôte
-Vous pouvez personnaliser ces redirections en éditant simplement le fichier Vagrantfile.
+## Ca ressemble à quoi ?
+![Aperçu de l'architecture](https://github.com/alinuxien/Vagrant/raw/master/Aperc%CC%A7u%20Projet%20Vagrant.png)
 
-En pré-requis, il faut bien sûr que Vagrant soit installé soit la machine, ce que vous pouvez vérifier avec la commande : 
-vagrant --version
+## Contenu ?
+Un Vangrantfile et un script bootstrap.sh
 
-Dans votre dossier de travail, vous pouvez récupérer tous les fichiers de ce dépôt, avec la commande : 
-git pull https://github.com/alinuxien/Vagrant.git
+## J'ai besoin de quoi ?
+De [Virtual Box](https://www.virtualbox.org/) et de [Vagrant](https://www.vagrantup.com/downloads) installés sur la machine. 
 
-Puis on lance la construction de la VM, avec l'installation des applications citées ci-dessus, par la commande :
+## Comment ça s'utilise ?
+La préparation et le lancement de la VM se fait en 1 seule commande, dans le dossier qui contient le Dockerfile.
+### Build & Run
 vagrant up
 
-Lorsque la construction est terminée ( quelques bonnes minutes!!! ), la VM est enfin lancée.
-On peut le vérifier en se connectant dessus en ssh, avec la commande : 
+## Ca a marché ?
+### On peut se connecter en ssh sur la VM
 vagrant ssh
+### Ensuite, on peut vérifier que les outils sont biens installés
+#### VIM
+vim --version 
+#### Ansible
+ansible --version 
+#### Docker
+docker --version 
 
-Une fois connecté en ssh, on vérifie que les applications ont bien été installées, avec les commandes :
-vim --version
-ansible --version
-docker --version
-
-On se déconnecte de la VM avec la commande :
-logout
-
-Et voilà, that's all folks.
+# Et après ?
+[Pourquoi pas y créer un container avec nginx ?](https://github.com/alinuxien/Docker.git)
 
